@@ -1,0 +1,23 @@
+{
+  "name": "syg-tabs",
+  "version": "1.0.0",
+  "description": "Simple tab script. シンプルなタブ",
+  "main": "syg-tabs.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sygnas/syg-tabs"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "javascript",
+    "tab",
+    "navigation"
+  ],
+  "author": "Hiroshi Fukuda <info.sygnas@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

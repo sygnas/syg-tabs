@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .tabs{
+                margin: 0 0 1rem 0;
+                padding: 0;
+                display: flex;
+            }
+            .tabs li{
+                list-style-type: none;
+                margin-right: 4px;
+            }
+            .tabs-btn{
+                padding: 0.4em 1em;
+                border-radius: 4px;
+                background-color: #ccc;
+                text-decoration: none;
+                color: #fff;
+            }
+            .tabs-btn:hover{
+                background-color: #000;
+            }
+            .tabs-btn[data-tabs-active = "true"]{
+                background-color: #4e0f0f;
+            }
+            .tabs-content{
+                padding: 1rem;
+                border-radius: 6px;
+                background-color: #ffe4c4;
+                display: none;
+            }
+            .tabs-content[data-tabs-active = "true"]{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <h1>Simple setting</h1>
+        <section class="js-section-1">
+            <nav>
+                <ul class="js-tabs tabs" data-tabs-content=".js-section-1 .js-tabs-content">
+                    <li><a href="#0" class="tabs-btn">content 0</a></li>
+                    <li><a href="#1" class="tabs-btn">content 1</a></li>
+                </ul>
+            </nav>
+
+            <section class="tabs-content js-tabs-content">
+                <p><strong>content 0</strong></p>
+                <p>Hello</p>
+                <p>Good morning</p>
+                <p>Good night</p>
+            </section>
+
+            <section class="tabs-content js-tabs-content">
+                <p><strong>content 1</strong></p>
+                <p>こんにちは</p>
+                <p>おはよう</p>
+                <p>おやすみ</p>
+            </section>
+        </section>
+        <!-- /.js-section-1 -->
+
+
+
+
+
+        <h1>Advanced Setting</h1>
+        <section class="js-section-2">
+            <nav>
+                <p><a class="js-tabs-prev tabs-btn" href="">&lt; Prev</a></p>
+
+                <ul class="js-tabs tabs"
+                    data-tabs-content=".js-section-2 .js-tabs-content"
+                    data-tabs-prev=".js-section-2 .js-tabs-prev"
+                    data-tabs-next=".js-section-2 .js-tabs-next"
+                    data-tabs-initial="1"
+                    >
+                    <li><a href="#0" class="tabs-btn">content 0</a></li>
+                    <li><a href="#1" class="tabs-btn">content 1</a></li>
+                    <li><a href="#2" class="tabs-btn">content 2</a></li>
+                </ul>
+
+                <p><a class="js-tabs-next tabs-btn" href="">Next &gt;</a></p>
+            </nav>
+
+            <section class="tabs-content js-tabs-content">
+                <p><strong>content 0</strong></p>
+                <p>Hello</p>
+            </section>
+
+            <section class="tabs-content js-tabs-content">
+                <p><strong>content 1</strong></p>
+                <p>こんにちは</p>
+            </section>
+
+            <section class="tabs-content js-tabs-content">
+                <p><strong>content 2</strong></p>
+                <p>你好</p>
+            </section>
+        </section>
+        <!-- /.js-section-1 -->
+
+        <script src="bundle.js?2"></script>
+    </body>
+</html>
+
+
+
