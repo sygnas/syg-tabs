@@ -69,7 +69,7 @@ export default class {
      */
     set_active_from_index(index) {
         // タブボタンとコンテンツにアクティブ属性付与
-        this.tab_buttons.forEach((btn, i) => {
+        get_node_array(this.tab_buttons).forEach((btn, i) => {
             if (index === i) {
                 btn.setAttribute(DATA_ACTIVE, 'true');
             } else {
@@ -77,7 +77,7 @@ export default class {
             }
         });
 
-        this.contents.forEach((content, i) => {
+        get_node_array(this.contents).forEach((content, i) => {
             if (index === i) {
                 content.setAttribute(DATA_ACTIVE, 'true');
             } else {
@@ -99,7 +99,7 @@ export default class {
 
         // タブボタンをクリック
         // 指定されたページをアクティブにする
-        this.tab_buttons.forEach((elm) => {
+        get_node_array(this.tab_buttons).forEach((elm) => {
             this._init_event_tab_button(elm);
         });
 
@@ -176,4 +176,12 @@ export default class {
         // ページをアクティブにする
         this.set_active_from_index(page_index);
     }
+
+}
+
+/**
+ * NodeListをArrayとして取り出す（IE対策）
+ */
+function get_node_array(node_list) {
+    return Array.prototype.slice.call(node_list, 0);
 }
