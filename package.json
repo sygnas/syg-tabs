@@ -1,10 +1,9 @@
 {
-  "name": "syg-tabs",
+  "name": "@sygnas/tabs",
   "version": "1.1.1",
   "description": "Simple tab script. シンプルなタブ",
-  "main": "dist/syg-tabs.js",
-  "module": "dist/syg-tabs.es.js",
-  "moduleName": "syg-tabs",
+  "main": "dist/tabs.js",
+  "module": "dist/tabs.es.js",
   "private": false,
   "repository": {
     "type": "git",

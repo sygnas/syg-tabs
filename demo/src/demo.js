@@ -1,5 +1,5 @@
 
-import Tabs from '../../syg-tabs';
+import Tabs from '../../dist/tabs.es';
 
 // simple setting
 const tabs1 = new Tabs('.js-section-1 .js-tabs');

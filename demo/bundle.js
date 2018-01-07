@@ -68,39 +68,50 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dist_tabs_es__ = __webpack_require__(1);
 
 
-var _sygTabs = __webpack_require__(1);
-
-var _sygTabs2 = _interopRequireDefault(_sygTabs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // simple setting
-var tabs1 = new _sygTabs2.default('.js-section-1 .js-tabs');
+var tabs1 = new __WEBPACK_IMPORTED_MODULE_0__dist_tabs_es__["a" /* default */]('.js-section-1 .js-tabs');
 
 // advanced setting
-var tabs2 = new _sygTabs2.default('.js-section-2 .js-tabs', {
+var tabs2 = new __WEBPACK_IMPORTED_MODULE_0__dist_tabs_es__["a" /* default */]('.js-section-2 .js-tabs', {
     use_url_hash: true
 });
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var classCallCheck = function classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
+};
 
+var createClass = function () {
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+    return function (Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);
+        if (staticProps) defineProperties(Constructor, staticProps);
+        return Constructor;
+    };
+}();
 
 /**
  * Easy tab controll
@@ -135,7 +146,7 @@ var _class = function () {
      * @param {String} target タブボタングループのDOMセレクタ
      */
     function _class(target, options) {
-        _classCallCheck(this, _class);
+        classCallCheck(this, _class);
 
         // 設定
         this.opt = Object.assign(defaults, options);
@@ -164,8 +175,7 @@ var _class = function () {
      * @param {Number} index タブ番号
      */
 
-
-    _createClass(_class, [{
+    createClass(_class, [{
         key: 'set_active_from_index',
         value: function set_active_from_index(index) {
             // タブボタンとコンテンツにアクティブ属性付与
@@ -292,19 +302,15 @@ var _class = function () {
             this.set_active_from_index(page_index);
         }
     }]);
-
     return _class;
 }();
 
-/**
- * NodeListをArrayとして取り出す（IE対策）
- */
-
-
-exports.default = _class;
 function get_node_array(node_list) {
     return Array.prototype.slice.call(node_list, 0);
 }
+
+/* harmony default export */ __webpack_exports__["a"] = (_class);
+//# sourceMappingURL=tabs.es.js.map
 
 /***/ }),
 /* 2 */

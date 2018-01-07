@@ -18,7 +18,7 @@ const paths = {
 let fileName,
     Configure;
 
-fileName = process.env.NODE_ENV !== 'production' ? 'syg-tabs' : 'syg-tabs.min';
+fileName = process.env.NODE_ENV !== 'production' ? 'tabs' : 'tabs.min';
 
 Configure = {
     entry: `${paths.source.root}index.js`,

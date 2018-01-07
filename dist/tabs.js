@@ -1,3 +1,9 @@
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.tabs = factory());
+}(this, (function () { 'use strict';
+
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -219,5 +225,7 @@ function get_node_array(node_list) {
     return Array.prototype.slice.call(node_list, 0);
 }
 
-export default _class;
-//# sourceMappingURL=syg-tabs.es.js.map
+return _class;
+
+})));
+//# sourceMappingURL=tabs.js.map

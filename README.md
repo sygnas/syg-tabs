@@ -21,7 +21,7 @@
 
 ### Install
 ```sh
-npm install syg-tabs
+npm install --save @sygnas/tabs
 ```
 
 ### html
@@ -65,7 +65,7 @@ npm install syg-tabs
 
 ### Script
 ```JavaScript
-import Tabs from 'syg-tabs';
+import Tabs from '@sygnas/tabs';
 const tab = new Tabs('.js-tabs');
 ```
 
