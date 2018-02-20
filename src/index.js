@@ -38,6 +38,12 @@ export default class {
 
         // タブグループのエレメント
         this.tab_group = document.querySelector(target);
+
+        // 該当するエレメントがなければ抜ける
+        if (this.tab_group === null) {
+          return;
+        }
+
         // 個々のタブボタン
         this.tab_buttons = this.tab_group.querySelectorAll(
             this.opt.tab_selector
