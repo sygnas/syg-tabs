@@ -23,7 +23,8 @@ const DATA_NEXT = 'data-tabs-next';
 const DATA_INITIAL = 'data-tabs-initial';
 // data属性：アクティブボタン / アクティブコンテンツ
 const DATA_ACTIVE = 'data-tabs-active';
-
+// data属性：URLハッシュに対応するか（オプションよりこちらが優先される）
+const DATA_HASH = 'data-tabs-hash';
 
 
 export default class {
@@ -64,9 +65,20 @@ export default class {
         // イベント設定
         this._init_event();
 
+        // URLハッシュ付けるかを確認
+        this.$_check_url_hash_enabled();
+
         // 現在表示しているページを取得
         this.active = 0;
         this._set_initial_page();
+    }
+
+    /**
+     * URLハッシュ対応するか確認
+     */
+    $_check_url_hash_enabled() {
+      const is_enable = this.tab_group.getAttribute(DATA_HASH) === 'true';
+      this.opt.use_url_hash = is_enable;
     }
 
     /**

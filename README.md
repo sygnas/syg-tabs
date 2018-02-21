@@ -77,6 +77,7 @@ const tab = new Tabs('.js-tabs');
 | data-tabs-prev |  | 戻るボタンのセレクタ |
 | data-tabs-next |  | 進むボタンのセレクタ |
 | data-tabs-initial | 0 | 初期状態で表示するページ番号 |
+| data-tabs-hash |  | URLハッシュに対応するなら "true"。 Options より優先される |
 
 ## Options
 

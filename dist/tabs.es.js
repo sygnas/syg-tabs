@@ -506,6 +506,8 @@ var DATA_NEXT = 'data-tabs-next';
 var DATA_INITIAL = 'data-tabs-initial';
 // data属性：アクティブボタン / アクティブコンテンツ
 var DATA_ACTIVE = 'data-tabs-active';
+// data属性：URLハッシュに対応するか（オプションよりこちらが優先される）
+var DATA_HASH = 'data-tabs-hash';
 
 var _class = function () {
 
@@ -539,18 +541,32 @@ var _class = function () {
         // イベント設定
         this._init_event();
 
+        // URLハッシュ付けるかを確認
+        this.$_check_url_hash_enabled();
+
         // 現在表示しているページを取得
         this.active = 0;
         this._set_initial_page();
     }
 
     /**
-     * 指定した index のタブをアクティブにする
-     * @param {Number} index タブ番号
+     * URLハッシュ対応するか確認
      */
 
 
     _createClass(_class, [{
+        key: '$_check_url_hash_enabled',
+        value: function $_check_url_hash_enabled() {
+            var is_enable = this.tab_group.getAttribute(DATA_HASH) === 'true';
+            this.opt.use_url_hash = is_enable;
+        }
+
+        /**
+         * 指定した index のタブをアクティブにする
+         * @param {Number} index タブ番号
+         */
+
+    }, {
         key: 'set_active_from_index',
         value: function set_active_from_index(index) {
             // タブボタンとコンテンツにアクティブ属性付与
