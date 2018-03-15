@@ -640,7 +640,7 @@ var _class = function () {
             var _this2 = this;
 
             elm.addEventListener('click', function (e) {
-                var index = _Number$parseInt(e.target.hash.substr(1), 10);
+                var index = _Number$parseInt(e.currentTarget.hash.substr(1), 10);
                 _this2.set_active_from_index(index);
                 e.preventDefault();
             });

@@ -142,7 +142,7 @@ export default class {
      */
     _init_event_tab_button(elm) {
         elm.addEventListener('click', (e) => {
-            const index = Number.parseInt(e.target.hash.substr(1), 10);
+            const index = Number.parseInt(e.currentTarget.hash.substr(1), 10);
             this.set_active_from_index(index);
             e.preventDefault();
         });
